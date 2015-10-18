@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IosIot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wSl-Kj-43B">
+                                <rect key="frame" x="276" y="113" width="51" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="L6g-I5-Qc0"/>
+                                    <constraint firstAttribute="width" constant="49" id="fBj-Kn-etQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="lightValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8uU-t4-vid"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VND-Xh-EPm">
+                                <rect key="frame" x="207" y="118" width="51" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Man-b3-iLb"/>
+                                    <constraint firstAttribute="width" constant="51" id="V92-cO-wlZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r09-s5-j0n">
+                                <rect key="frame" x="276" y="183" width="51" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="j9Z-Lz-vQb"/>
+                                    <constraint firstAttribute="height" constant="31" id="nBW-zW-zhC"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="light2ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VHZ-sM-rIk"/>
+                                    <action selector="lightValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cel-1E-DYM"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxM-a1-2ps">
+                                <rect key="frame" x="205" y="188" width="53" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ADh-Ga-mCb"/>
+                                    <constraint firstAttribute="width" constant="53" id="j6F-Bm-LiW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r09-s5-j0n" firstAttribute="leading" secondItem="RxM-a1-2ps" secondAttribute="trailing" constant="18" id="0A2-Lz-91A"/>
+                            <constraint firstItem="wSl-Kj-43B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="4Eo-TU-A36"/>
+                            <constraint firstItem="wSl-Kj-43B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Y1-o4-JQO"/>
+                            <constraint firstItem="RxM-a1-2ps" firstAttribute="top" secondItem="VND-Xh-EPm" secondAttribute="bottom" constant="49" id="9Bq-Da-WG1"/>
+                            <constraint firstItem="r09-s5-j0n" firstAttribute="top" secondItem="wSl-Kj-43B" secondAttribute="bottom" constant="39" id="Is9-rN-1zL"/>
+                            <constraint firstItem="wSl-Kj-43B" firstAttribute="leading" secondItem="VND-Xh-EPm" secondAttribute="trailing" constant="18" id="Vhp-Oi-0dZ"/>
+                            <constraint firstItem="VND-Xh-EPm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="oOG-cM-91v"/>
+                            <constraint firstItem="r09-s5-j0n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oZC-lJ-eYQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="uiSwitch" destination="wSl-Kj-43B" id="jzB-NQ-KNy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="333"/>
+        </scene>
+    </scenes>
+</document>
